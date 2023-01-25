@@ -78,7 +78,7 @@ mod tests {
 	fn in_range_u32_test() {
 		let result = in_range_u32(10, 1, 15);
 		if !result {
-			panic!("Number in range test failed. Number not in range.")
+			panic!("u32 number in range test failed. Number not in range.")
 		}
 	}
 
@@ -86,7 +86,7 @@ mod tests {
 	fn not_in_range_u32_test() {
 		let result = not_in_range_u32(100, 1, 15);
 		if !result {
-			panic!("Number not in range test failed. Number is in range.")
+			panic!("u32 number not in range test failed. Number is in range.")
 		}
 	}
 }

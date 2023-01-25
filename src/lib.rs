@@ -1,21 +1,9 @@
 pub fn in_range(value: i32, min: i32, max: i32) -> bool {
-	let mut result = false;
-
-	if value >= min && value <= max {
-		result = true;
-	}
-
-	result
+	value >= min && value <= max
 }
 
 pub fn not_in_range(value: i32, min: i32, max: i32) -> bool {
-	let mut result = false;
-
-	if !(value >= min && value <= max) {
-		result = true;
-	}
-
-	result
+	!in_range(value, min, max)
 }
 
 #[cfg(test)]

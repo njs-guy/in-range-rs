@@ -8,6 +8,16 @@ pub fn in_range(value: i32, min: i32, max: i32) -> bool {
 	result
 }
 
+pub fn not_in_range(value: i32, min: i32, max: i32) -> bool {
+	let mut result = false;
+
+	if !(value >= min && value <= max) {
+		result = true;
+	}
+
+	result
+}
+
 #[cfg(test)]
 mod tests {
 	use super::*;
@@ -17,6 +27,14 @@ mod tests {
 		let result = in_range(10, 1, 15);
 		if !result {
 			panic!("Number in range test failed. Number not in range.")
+		}
+	}
+
+	#[test]
+	fn not_in_range_test() {
+		let result = not_in_range(100, 1, 15);
+		if !result {
+			panic!("Number not in range test failed. Number is in range.")
 		}
 	}
 }

@@ -34,6 +34,9 @@
 //! // Prints true;
 //! ```
 
+// TODO 0.1.1 - add functions for i64, u64, i128, and u128
+// TODO 0.1.2 - add functions for i8, u8, i16, and u16
+
 /// Return true if an i32 value is within range.
 pub fn in_range(value: i32, min: i32, max: i32) -> bool {
 	value >= min && value <= max
